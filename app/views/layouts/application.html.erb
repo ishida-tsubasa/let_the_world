@@ -6,9 +6,32 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
   </head>
 
   <body>
+    <header>
+<div class="main_nav">
+  <h1 class="logo_brand">Let The World Know</h1>
+  <ul class="nav justify-content-end">
+    <li class="nav-item">
+      <a class="nav-link active" href="#">チャンネル一覧画面</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">ログイン</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">新規投稿</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">チャット新規作成</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+    </li>
+ </ul>
+</div>
+    </header>
     <%= yield %>
   </body>
 </html>
