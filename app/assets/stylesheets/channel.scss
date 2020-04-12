@@ -1,21 +1,20 @@
 // header↓
-
 .logo_brand{
     margin-top:20px;
     margin-left: 20px;
-
 }
 
 .main_nav{
     border-bottom:solid 3px black;
+    background-color:aqua;
+
 }
 
 
 // center↓
-
 .container{
     height:230px;
-    margin:170px 0 100px 0 ;
+    margin:170px 0 110px 0 ;
     padding: 0.5em 1em;
     background: -moz-linear-gradient(#ffb03c, #ff708d);
     background: -webkit-linear-gradient(#ffb03c, #ff708d);
@@ -29,14 +28,16 @@
 
 
 // footer
-
 .sub_title{
     color: blue;
     text-align: center;
     padding-top: 50px;
+    padding-bottom: 50px;
     border-top:solid 3px black;
-
+    background-color:aqua;
 }
+
+
 
 
 
