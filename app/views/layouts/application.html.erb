@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>LetTheWorld</title>
+    <!--<title>LetTheWorld</title>-->
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -12,10 +12,12 @@
   <body>
     <header>
 <div class="main_nav">
-  <h1 class="logo_brand">Let The World Know</h1>
+  <h1 class="logo_brand">
+    <%= link_to("Let The World Know", "/channel/index") %>
+    </h1>
   <ul class="nav justify-content-end">
     <li class="nav-item">
-      <a class="nav-link active" href="#">チャンネル一覧画面</a>
+      <a class="nav-link active" href="/channel/index">チャンネル一覧画面</a>
     </li>
     <li class="nav-item">
       <a class="nav-link" href="#">ログイン</a>
@@ -24,7 +26,7 @@
       <a class="nav-link" href="#">新規投稿</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#">チャット新規作成</a>
+      <a class="nav-link" href="/channel/new">チャンネル新規作成</a>
     </li>
     <li class="nav-item">
       <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
@@ -33,5 +35,8 @@
 </div>
     </header>
     <%= yield %>
+    <footer>
+      <h1 class="sub_title" >世界に自分の考えを伝えよう</h1>
+    </footer>
   </body>
 </html>

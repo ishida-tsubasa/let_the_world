@@ -1,5 +1,6 @@
 class ChatsController < ApplicationController
-  def show
-    @chat = Channel.find_by(id:params[:id])
+  def index
+    @channel = Channel.find_by(id:params[:id])
+    # @chat = Chat.(id: params[:id])
   end
 end

@@ -1,9 +1,16 @@
-.title{
-    color:red;
-    width:50%;
+.chats_title{
+    // color:red;
+    width:30%;
+    // text-align:center;
+    margin:50px auto;
+    // padding-top:50px;
+    // border-styles:solid 4px red;
+    // padding-top:50px ;
     text-align:center;
-    margin:0 auto;
-    padding-top:50px;
+    background: -moz-linear-gradient(#ffb03c, #ff708d);
+    background: -webkit-linear-gradient(#ffb03c, #ff708d);
+    background: linear-gradient(to right, #ffb03c, #ff708d);
+    color: #FFF;
 }
 
 
