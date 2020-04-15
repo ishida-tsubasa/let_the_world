@@ -34,6 +34,11 @@
  </ul>
 </div>
     </header>
+    <% if flash[:notice] %>
+     <div class="flash">
+       <%= flash[:notice] %>
+      </div>
+    <% end %>
     <%= yield %>
     <footer>
       <h1 class="sub_title" >世界に自分の考えを伝えよう</h1>

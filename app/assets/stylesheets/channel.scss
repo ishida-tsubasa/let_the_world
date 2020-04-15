@@ -27,6 +27,18 @@
     margin-top:70px;
 }
 
+// .flash{
+//     padding: 10px 0;
+//   color: white;
+//   background: rgb(251, 170, 88);
+//   text-align: center;
+//   position: absolute;
+//   top: 64px;
+//   z-index: 10;
+//   width: 100%;
+//   border-radius: 0 0 2px 2px;
+//   font-size: 14px;
+// }
 
 // footer
 .sub_title{
@@ -47,6 +59,10 @@
     background: -webkit-linear-gradient(#ffb03c, #ff708d);
     background: linear-gradient(to right, #ffb03c, #ff708d);
     color: #FFF;
+}
+
+.errors_message{
+    color:red;
 }
 
 .new_channel{
