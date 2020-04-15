@@ -1,0 +1,12 @@
+<div class="new_main">
+    <% @channel.errors.full_messages.each do|message|%>
+    　　<p class="errors_message"><%= message %></p>
+    <% end %>
+    <%= form_for @channel do |f| %>
+        <h1 class="channel_title">チャンネルを作成しよう</h1>
+        <%= f.text_field :channel, class: "new_channel", placeholder: "チャンネル名記載" %>
+        <%= f.submit '新規チャンネル作成', class: 'new_submit' %>
+    <% end %>
+</div>
+
+
