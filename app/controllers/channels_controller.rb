@@ -9,6 +9,7 @@ class ChannelsController < ApplicationController
 
   def create
     @channel = Channel.new(channel_params(params))
+    @channel.user = current_user
     if @channel.save
       flash[:notice] = "作成完了"
      redirect_to channels_path

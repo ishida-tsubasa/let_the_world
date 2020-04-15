@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  root to: 'channels#index'
+
   resources :channels, only: [:index, :new, :create]
 
   get "chats/:id" => "chats#index"
