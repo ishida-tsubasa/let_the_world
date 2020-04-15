@@ -1,3 +1,25 @@
+/* application.html ================================ */
+
+.flash{
+    color:red;
+    // font-weight:50px;
+    width:200px;
+    height:60px;
+    margin:30px auto;
+    text-align:center;
+}
+
+.sub_title{
+    color: blue;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 60px;
+    border-top:solid 3px black;
+    background-color:aqua;
+}
+
+
+
 /* channel/index ================================ */
 // header↓
 .logo_brand{
@@ -41,14 +63,6 @@
 // }
 
 // footer
-.sub_title{
-    color: blue;
-    text-align: center;
-    padding-top: 50px;
-    padding-bottom: 60px;
-    border-top:solid 3px black;
-    background-color:aqua;
-}
 
 
 /* channel/new ================================ */

@@ -1,3 +1,4 @@
 class Channel < ApplicationRecord
-    validates :channel, presence: { message: '名を正しく入力してください。' }
+  validates :channel, presence: { message: '名を正しく入力してください' }
+    validates :channel, uniqueness: { message: '名が重複しています' }
 end
