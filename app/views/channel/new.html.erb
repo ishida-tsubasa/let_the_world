@@ -3,7 +3,7 @@
             <% @channel.errors.full_messages.each do|message|%>
             　　<p class="errors_message"><%= message %></p>
             <% end %>
-            <%= form_tag("/channel/create/") do %>
+            <%= form_tag("/channel", method: 'post') do %>
                 <h1 class="channel_title">チャンネルを作成しよう</h1>
                 <input class="new_channel" placeholder="チャンネル名記載" name="channel"></input>
             <input type="submit" class="new_submit" value="新規チャンネル作成">

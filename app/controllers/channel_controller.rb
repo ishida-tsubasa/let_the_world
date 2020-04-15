@@ -11,7 +11,7 @@ class ChannelController < ApplicationController
     @channel = Channel.new(channel: params[:channel])
     if @channel.save
       flash[:notice] = "作成完了"
-     redirect_to("/channel/index")
+     redirect_to("/channel")
     else
       render("channel/new")
     end

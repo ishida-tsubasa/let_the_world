@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
-  get "channel/index" => "channel#index"
-  get "channel/new" => "channel#new"
-  post "channel/create" => "channel/create"
+  resources :channel, only: [:index, :new, :create]
 
   get "chats/:id" => "chats#index"
   devise_for :users
