@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :channel, only: [:index, :new, :create]
+  resources :channels, only: [:index, :new, :create]
 
   get "chats/:id" => "chats#index"
   devise_for :users
