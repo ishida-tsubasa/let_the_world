@@ -14,12 +14,12 @@ class ChannelsController < ApplicationController
       flash[:notice] = "作成完了"
      redirect_to channels_path
     else
-      render 'new'
+      render new_channel_path
     end
   end
-  
+
   private
-  
+
   def channel_params(params)
     params.require(:channel).permit(:channel)
   end
