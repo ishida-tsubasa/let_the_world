@@ -15,9 +15,29 @@
 }
 
 .chats_main{
+    width:500px;
+    margin:50px auto;
+    background: -moz-linear-gradient(#ffb03c, #ff708d);
+    background: -webkit-linear-gradient(#ffb03c, #ff708d);
+    background: linear-gradient(to right, #ffb03c, #ff708d);
+    color: #FFF;
+
+
+}
+
+.chats_name{
+    width:500px;
+    text-align:center;
+    // border:solid 2px blue;
+}
+
+.chats_content{
     text-align:center;
 }
 
+.chats_updated_at{
+    text-align:right;
+}
 
 // Place all the styles related to the chats controller here.
 // They will automatically be included in application.css.

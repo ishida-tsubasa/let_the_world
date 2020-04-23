@@ -2,11 +2,20 @@
     <h1><%= @channel.channel %></h1>
 </div>
 
-<div class="chats_main">
-<% @chats.each do |chat|%>
-     <%= chat.content %>
-<% end %>
-</div>
+ <% @chats.each do |chat|%>
+ <div class="chats_main">
+     <% @user = User.find_by(id:chat.user_id)%>
+     <div chat class="chats_name">
+         <%= @user.email%>
+     </div>
+     <div class="chats_content">
+         <%= chat.content %>
+     </div>
+     <div class="chats_updated_at">
+         <%= chat.updated_at %>
+     </div>
+    </div>
+ <% end %>
 
 <!--<h1>Chats#show</h1>-->
 <!--<p>Find me in app/views/chats/show.html.erb</p>-->
