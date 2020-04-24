@@ -10,7 +10,7 @@
     <h1 class="nav-link active" >
      <div class="channel_item">
         <% @channels.each do |channel| %>
-        　 <%= link_to(channel.channel,"") %>
+        　 <%= link_to channel.channel, chat_path(channel.id) %>
         <% end %>
      </div>
     </h1>
