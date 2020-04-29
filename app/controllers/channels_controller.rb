@@ -8,7 +8,7 @@ class ChannelsController < ApplicationController
   end
 
   def create
-    @channel = Channel.new(channel_params(params))
+    @channel = Channel.new(channel_params)
     @channel.user = current_user
     if @channel.save
       flash[:notice] = "作成完了"
@@ -20,7 +20,7 @@ class ChannelsController < ApplicationController
 
   private
 
-  def channel_params(params)
+  def channel_params
     params.require(:channel).permit(:channel)
   end
 

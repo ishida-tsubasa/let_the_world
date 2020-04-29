@@ -11,6 +11,8 @@
   <% end %>
 </div>
 
+
+
 <% @chats.each do |chat|%>
  <div class="chats_main">
      <!--< @user = User.find_by(id:chat.user_id)%>-->
@@ -29,6 +31,9 @@
      <% end %>
 </div>
 <% end %>
+
+<%= paginate @chats %>
+
 
 <!--<h1>Chats#show</h1>-->
 <!--<p>Find me in app/views/chats/show.html.erb</p>-->

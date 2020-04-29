@@ -49,3 +49,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'devise'
 gem 'carrierwave'
 gem 'mini_magick'
+gem 'kaminari'
+gem 'bootstrap-will_paginate', '1.0.0'
