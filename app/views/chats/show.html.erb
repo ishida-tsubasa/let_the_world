@@ -12,7 +12,6 @@
 </div>
 
 
-
 <% @chats.each do |chat|%>
  <div class="chats_main">
      <!--< @user = User.find_by(id:chat.user_id)%>-->
@@ -32,7 +31,11 @@
 </div>
 <% end %>
 
-<%= paginate @chats %>
+<%= will_paginate @chats, :previous_label => ' &lt 前へ', :next_label => '次へ &gt' %>
+
+
+
+<!--# <= paginate @chats >-->
 
 
 <!--<h1>Chats#show</h1>-->
