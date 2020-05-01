@@ -3,9 +3,12 @@
 </div>
 
 <div class="chats_create">
+<% unless user_signed_in? %>
+  <p>ログインが必要です</p>
+<% end %>
   <%= form_for @chat, url: channel_chats_path(@channel.id) do |f| %>
     <%= f.text_field :content, placeholder: "コメント作成" %>
-    <%= f.submit '作成'%>
+    <%= f.submit '作成', disabled: !user_signed_in? %>
     <%= f.label "画像をアップロード" %><br><%= f.file_field :image %>
   <% end %>
 </div>
