@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
   root to: 'channels#index'
 
-  resources :channels, only: [:index, :new, :create]
+  resources :channels, only: [:index, :new, :create] do
+    resources :chats
+  end
   resources :chats
   # get "chats/:id" => "chats#index"
   devise_for :users
