@@ -15,7 +15,6 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
-
   $(document).on('turbolinks:load', function() {
     function readURL(input) {
       if (input.files && input.files[0]) {
