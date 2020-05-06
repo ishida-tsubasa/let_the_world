@@ -1,43 +1,51 @@
-<div class="chats_title">
-    <h1><%= @channel.channel %></h1>
-</div>
+  <div class="chats_title">
+   <h1><%= @channel.channel %></h1>
+  </div>
 
-<div class="chats_create">
-<% unless user_signed_in? %>
-  <p>ログインが必要です</p>
-<% end %>
-  <%= form_for @chat, url: channel_chats_path(@channel.id) do |f| %>
-    <%= f.text_field :content, placeholder: "コメント作成" %>
-    <%= f.submit '作成', disabled: !user_signed_in? %>
-    <%= f.label "画像をアップロード" %><br><%= f.file_field :image %>
-  <% end %>
-</div>
+  <div class="chats_create">
+    <% unless user_signed_in? %>
+     <p class="chats_login">ログインが必要です</p>
+    <% end %>
+
+    <%= form_for @chat, url: channel_chats_path(@channel.id) do |f| %>
+      <%= f.text_field :content, placeholder: "コメント作成" %>
+      <%= f.submit '作成', disabled: !user_signed_in? %>
+      <%= f.label "画像をアップロード" %><br><%= f.file_field :image %>
+    <% end %>
+
+    <!--<= image_tag chat.image_url(:thumb) if chat.image.present? %>-->
+
+    <div class="chats_form">
+      <%= form_tag(channel_chats_path(@channel.id), method: "get") do %>
+        <%= label_tag :検索 %>
+        <%= text_field_tag :search_word %>
+        <%= submit_tag "検索" %>
+      <% end %>
+    </div>
+  </div>
 
 
-<% @chats.each do |chat|%>
- <div class="chats_main">
+  <% @chats.each do |chat|%>
+    <div class="chats_main">
      <!--< @user = User.find_by(id:chat.user_id)%>-->
-     <div chat class="chats_name">
-         <%= chat.user.email%>
-     </div>
-     <div class="chats_content">
-         <%= chat.content %>
-     </div>
-     <div class="chats_updated_at">
-         <%= chat.updated_at.strftime("%H:%M・%Y/%m/%d") %>
-     </div>
+      <div chat class="chats_name">
+        <%= chat.user.email%>
+      </div>
+      <div class="chats_content">
+        <%= chat.content %>
+      </div>
+      <div class="chats_updated_at">
+        <%= chat.updated_at.strftime("%H:%M・%Y/%m/%d") %>
+      </div>
 
-     <% if chat.image? %>
-         <%= image_tag chat.image.url %>
-     <% end %>
-</div>
-<% end %>
+      <% if chat.image? %>
+        <%= image_tag chat.image.url %>
+      <% end %>
+    </div>
+  <% end %>
 
 <%= will_paginate @chats, :previous_label => ' &lt 前へ', :next_label => '次へ &gt' %>
 
-
-
-<!--# <= paginate @chats >-->
 
 
 <!--<h1>Chats#show</h1>-->

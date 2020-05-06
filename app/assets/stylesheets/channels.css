@@ -34,6 +34,10 @@
   background: linear-gradient(to right, #ffb03c, #ff708d);
   color: #FFF; }
 
+.channels_form{
+  text-align:right;
+}
+
 .channel_item {
   margin-top: 70px; }
 

@@ -2,7 +2,11 @@ class ChatsController < ApplicationController
 
   def index
     @channel = Channel.find(params[:channel_id])
-    @chats = @channel.chats.includes(:user).paginate(page: params[:page], per_page: 1)
+    @chats = if params[:search_word].present?
+               @channel.chats.includes(:user).where('content like ?', "%#{params[:search_word]}%").paginate(page: params[:page], per_page: 10)
+             else
+               @channel.chats.includes(:user).paginate(page: params[:page], per_page: 10)
+             end
     @chat = Chat.new
   end
 
