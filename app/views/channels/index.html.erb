@@ -4,17 +4,18 @@
       <%= text_field_tag :search_word %>
       <%= submit_tag "検索" %>
     <% end %>
-  </div>
-  <div class="container">
-    <ul class="nav justify-content-center"　class="channel_item">
-      <li class="nav-item">
-        <h1 class="nav-link active" >
-         <div class="channel_item">
-            <% @channels.each do |channel| %>
-            　 <%= link_to channel.channel, channel_chats_path(channel.id) %>
-            <% end %>
-         </div>
-        </h1>
-      </li>
-    </ul>
-  </div>
+
+    </div>
+    <div class="container">
+      <ul class="nav justify-content-center"　class="channel_item">
+        <li class="nav-item">
+          <h1 class="nav-link active" >
+           <div class="channel_item">
+              <% @channels.each do |channel| %>
+              　 <%= link_to channel.channel, channel_chats_path(channel.id) %>
+              <% end %>
+           </div>
+          </h1>
+        </li>
+      </ul>
+    </div>

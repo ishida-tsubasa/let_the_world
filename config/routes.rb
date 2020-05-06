@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root to: 'channels#index'
-
-  resources :channels, only: [:index, :new, :create] do
+# , only: [:index, :new, :create] do
+  resources :channels do
     resources :chats
   end
   resources :chats

@@ -25,4 +25,5 @@ class ChatsController < ApplicationController
   def chat_params
     params.require(:chat).permit(:content, :channel_id, :image)
   end
+
 end
