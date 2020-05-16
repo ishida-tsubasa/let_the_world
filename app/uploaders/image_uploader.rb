@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class ImageUploader < CarrierWave::Uploader::Base
   # Include RMagick or MiniMagick support:
   # include CarrierWave::RMagick
@@ -44,20 +46,20 @@ class ImageUploader < CarrierWave::Uploader::Base
   # def filename
   #   "something.jpg" if original_filename
   # end
-   include CarrierWave::MiniMagick
+  include CarrierWave::MiniMagick
   process resize_to_fit: [500, 500]
 
-#サムネイルを生成
- version :thumb do
-    process :resize_to_limit => [300, 300]
- end
+  # サムネイルを生成
+  version :thumb do
+    process resize_to_limit: [300, 300]
+  end
 
- #ファイル名を変更し拡張子を同じにする
+  # ファイル名を変更し拡張子を同じにする
   def filename
     super.chomp(File.extname(super)) + '.jpg'
   end
 
-#日付で保存
+  # 日付で保存
   def filename
     if original_filename.present?
       time = Time.now
@@ -65,5 +67,4 @@ class ImageUploader < CarrierWave::Uploader::Base
       name.downcase
     end
   end
-
 end
