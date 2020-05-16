@@ -20,7 +20,10 @@
       <%= link_to('チャンネル一覧画面', '/channels', class: 'nav-link active') %>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#">ログイン</a>
+      <a class="nav-link" href= "/users/sign_in" >ログイン</a>
+    </li>
+    <li class="nav-item">
+      <%= link_to('ログアウト', destroy_user_session_path, method: :delete, class: 'nav-link') %>
     </li>
     <li class="nav-item">
       <a class="nav-link" href="#">新規投稿</a>
@@ -40,8 +43,8 @@
       </div>
     <% end %>
     <%= yield %>
-    <footer>
-      <h1 class="sub_title" >世界に自分の考えを伝えよう</h1>
-    </footer>
+    <!--<footer>-->
+      <h1 class="sub_title">世界に自分の考えを伝えよう</h1>
+    <!--</footer>-->
   </body>
 </html>
