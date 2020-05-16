@@ -45,6 +45,8 @@ group :development do
   gem 'pry-rails'
   gem 'pry-byebug'
   gem 'pry-doc'
+  gem 'rubocop'
+  gem 'rubocop-rails'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
@@ -56,5 +58,3 @@ gem 'mini_magick'
 # gem 'bootstrap-will_paginate', '1.0.0'
 gem 'will_paginate'
 gem 'bootstrap-will_paginate'
-gem 'rubocop'
-gem 'rubocop-rails'
