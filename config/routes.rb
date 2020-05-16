@@ -1,6 +1,8 @@
+# frozen_string_literal: true
+
 Rails.application.routes.draw do
   root to: 'channels#index'
-# , only: [:index, :new, :create] do
+  # , only: [:index, :new, :create] do
   resources :channels do
     resources :chats
   end
