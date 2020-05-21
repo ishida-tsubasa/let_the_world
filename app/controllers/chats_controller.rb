@@ -31,10 +31,24 @@ class ChatsController < ApplicationController
     redirect_to channel_chats_path(chat.channel_id)
   end
 
+  def edit
+    @channel = Channel.find_by(id: params[:channel_id])
+    @chat = Chat.find_by(id: params[:id])
+  end
+
+  def update
+    @channel = Channel.find(params[:channel_id])
+    @chat = Chat.find(params[:id])
+    @chat.assign_attributes(chat_params)
+    @chat.save!
+    flash[:notice] = '更新完了'
+    redirect_to channel_chats_path(@chat.channel_id)
+  end
+
   private
 
   def chat_params
-    params.require(:chat).permit(:content, :channel_id, :image)
+    params.require(:chat).permit(:content, :image)
   end
 
 end

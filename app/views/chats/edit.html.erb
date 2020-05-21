@@ -1,0 +1,5 @@
+<%= form_for @chat, url: channel_chat_path(@channel.id, @chat.id) do |f| %>
+  <%= f.text_field :content, placeholder: "コメント作成" %>
+  <%= f.submit '更新', disabled: !user_signed_in? %>
+  <%= f.label "画像をアップロード" %><br><%= f.file_field :image, id: :chat_img %>
+<% end %>

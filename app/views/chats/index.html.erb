@@ -36,6 +36,7 @@
       <% if current_user == chat.user %>
         <div class='chats_updated_at' >
          <%= link_to '削除', channel_chat_path(@channel, chat),  method: 'delete', data: { confirm: '本当に削除しますか？' } %>
+         <%= link_to '編集', edit_channel_chat_path(@channel, chat) %>
         </div>
       <% end %>
       <div chat class="chats_name">
