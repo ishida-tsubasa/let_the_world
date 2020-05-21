@@ -33,7 +33,11 @@
 
   <% @chats.each do |chat|%>
     <div class="chats_main">
-     <!--< @user = User.find_by(id:chat.user_id)%>-->
+      <% if current_user == chat.user %>
+        <div class='chats_updated_at' >
+         <%= link_to '削除', channel_chat_path(@channel, chat),  method: 'delete', data: { confirm: '本当に削除しますか？' } %>
+        </div>
+      <% end %>
       <div chat class="chats_name">
         <%= chat.user.username %>
       </div>

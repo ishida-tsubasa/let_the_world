@@ -24,9 +24,17 @@ class ChatsController < ApplicationController
     redirect_to channel_chats_path(@chat.channel_id)
   end
 
+  def destroy
+    chat = current_user.chats.find(params[:id])
+    chat.destroy
+    flash[:notice] = "削除されました"
+    redirect_to channel_chats_path(chat.channel_id)
+  end
+
   private
 
   def chat_params
     params.require(:chat).permit(:content, :channel_id, :image)
   end
+
 end
