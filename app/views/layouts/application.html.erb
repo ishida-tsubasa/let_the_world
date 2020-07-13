@@ -10,33 +10,31 @@
   </head>
 
   <body>
-    <header>
-<div class="main_nav">
-  <h1 class="logo_brand">
-    <%= link_to("Let The World Know", "/channels") %>
-    </h1>
-  <ul class="nav justify-content-end">
-    <li class="nav-item">
-      <%= link_to('チャンネル一覧画面', '/channels', class: 'nav-link active') %>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href= "/users/sign_in" >ログイン</a>
-    </li>
-    <li class="nav-item">
-      <%= link_to('ログアウト', destroy_user_session_path, method: :delete, class: 'nav-link') %>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">新規投稿</a>
-    </li>
-    <li class="nav-item">
-      <%= link_to('チャンネル新規作成', '/channels/new', class: 'nav-link') %>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-    </li>
- </ul>
-</div>
-    </header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <%= link_to 'Let The World Know', channels_path, class: 'navbar-brand' %>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <%= link_to('チャンネル新規作成', new_channel_path, class: 'nav-link') %>
+          </li>
+          <li class="nav-item">
+            <% if user_signed_in? %>
+              <%= link_to('ログアウト', destroy_user_session_path, method: 'delete', class: 'nav-link') %>
+            <% else %>
+              <%= link_to('ログイン', new_user_session_path, class: 'nav-link') %>
+            <% end %>
+          </li>
+        </ul>
+        <%= form_tag(channels_path, method: "get", class: "form-inline my-2 my-lg-0") do %>
+          <%= text_field_tag :search_word, "", { class: "form-control mr-sm-2" } %>
+          <%= submit_tag "検索", class: "btn btn-outline-success my-2 my-sm-0" %>
+        <% end %>
+      </div>
+    </nav>
     <% if flash[:notice] %>
      <div class="flash">
        <%= flash[:notice] %>
