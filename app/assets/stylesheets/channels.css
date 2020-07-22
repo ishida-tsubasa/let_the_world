@@ -16,23 +16,25 @@
   background-color:White; }
 
 .sub_title {
-  color: #007bff;
+  /*color: #007bff;*/
   text-align: center;
   padding-top: 50px;
-  padding-bottom: 60px;
+  padding-bottom: 120px;
   margin:0;
-  border-top: solid 2px blue;
-  background-color: White; }
+  /*border-top: solid 2px blue;*/
+  /*background-color: light;*/
+}
 
 /* channel/index ================================ */
-.container {
+.channel_main {
   height: 230px;
   margin: 170px 0 110px 0;
   padding: 0.5em 1em;
-  background: -moz-linear-gradient(#ffb03c, #ff708d);
-  background: -webkit-linear-gradient(#ffb03c, #ff708d);
-  background: linear-gradient(to right, #ffb03c, #ff708d);
-  color: #FFF; }
+  /*background: -moz-linear-gradient(#ffb03c, #ff708d);*/
+  /*background: -webkit-linear-gradient(#ffb03c, #ff708d);*/
+  /*background: linear-gradient(to right, #ffb03c, #ff708d);*/
+  /*color: #FFF;*/
+  }
 
 .channels_form{
   text-align:right;
@@ -43,13 +45,14 @@
 
 /* channel/new ================================ */
 .channel_title {
-  width: 440px;
+  width: 460px;
   margin-bottom: 60px;
   padding: 0;
-  background: -moz-linear-gradient(#ffb03c, #ff708d);
-  background: -webkit-linear-gradient(#ffb03c, #ff708d);
-  background: linear-gradient(to right, #ffb03c, #ff708d);
-  color: #FFF; }
+  /*background: -moz-linear-gradient(#ffb03c, #ff708d);*/
+  /*background: -webkit-linear-gradient(#ffb03c, #ff708d);*/
+  /*background: linear-gradient(to right, #ffb03c, #ff708d);*/
+  /*r: #FFFcolo; */
+}
 
 .errors_message {
   color: red; }

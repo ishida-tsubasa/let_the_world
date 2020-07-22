@@ -8,10 +8,10 @@
     // border-styles:solid 4px red;
     // padding-top:50px ;
     text-align:center;
-    background: -moz-linear-gradient(#ffb03c, #ff708d);
-    background: -webkit-linear-gradient(#ffb03c, #ff708d);
-    background: linear-gradient(to right, #ffb03c, #ff708d);
-    color: #FFF;
+    // background: -moz-linear-gradient(#ffb03c, #ff708d);
+    // background: -webkit-linear-gradient(#ffb03c, #ff708d);
+    // background: linear-gradient(to right, #ffb03c, #ff708d);
+    // color: #FFF;
 }
 
 .chats_create{
@@ -32,12 +32,12 @@
 }
 
 .chats_main{
-    width:500px;
+    width:550px;
     margin:50px auto;
-    background: -moz-linear-gradient(#ffb03c, #ff708d);
-    background: -webkit-linear-gradient(#ffb03c, #ff708d);
-    background: linear-gradient(to right, #ffb03c, #ff708d);
-    color: #FFF;
+    // background: -moz-linear-gradient(#ffb03c, #ff708d);
+    // background: -webkit-linear-gradient(#ffb03c, #ff708d);
+    // background: linear-gradient(to right, #ffb03c, #ff708d);
+    // ;color: #FFF
 }
 
 .chats_name{
@@ -50,9 +50,10 @@
     text-align:center;
 }
 
-.chats_updated_at{
+.chats_updated_aｓt{
     text-align:right;
 }
+
 
 // Place all the styles related to the chats controller here.
 // They will automatically be included in application.css.

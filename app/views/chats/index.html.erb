@@ -1,38 +1,35 @@
-  <div class="chats_title">
+  <div class="chats_title alert alert-primary" >
    <h1><%= @channel.channel %></h1>
   </div>
 
   <div class="chats_create">
     <% unless user_signed_in? %>
-     <p class="chats_login">ログインが必要です</p>
+      <div class="alert alert-danger" role="alert">
+      ログインが必要です
+      </div>
+     <!--<p class="chats_login">ログインが必要です</p>-->
     <% end %>
 
+
     <%= form_for @chat, url: channel_chats_path(@channel.id) do |f| %>
-      <%= f.text_field :content, placeholder: "コメント作成" %>
-      <%= f.submit '作成', disabled: !user_signed_in? %>
+      <%= f.text_field :content, placeholder: "コメント作成", class: "form-control mr-sm-2" %>
+      <%= f.submit '作成', disabled: !user_signed_in?, class: "btn btn-outline-primary" %>
       <%= f.label "画像をアップロード" %><br><%= f.file_field :image, id: :chat_img %>
     <% end %>
 
     <% if @chat.image.present? %>
-     <%= image_tag @chat.image, id: :img_prev %>
+      <%= image_tag @chat.image, id: :img_prev %>
     <% else %>
      <%= image_tag "sample.jpg", id: :img_prev %>
     <% end %>
 
     <!--<= image_tag chat.image_url(:thumb) if chat.image.present? %>-->
 
-    <div class="chats_form">
-      <%= form_tag(channel_chats_path(@channel.id), method: "get") do %>
-        <%= label_tag :検索 %>
-        <%= text_field_tag :search_word %>
-        <%= submit_tag "検索" %>
-      <% end %>
-    </div>
   </div>
 
 
   <% @chats.each do |chat|%>
-    <div class="chats_main">
+    <div class="chats_main alert alert-primary">
       <% if current_user == chat.user %>
         <div class='chats_updated_at' >
          <%= link_to '削除', channel_chat_path(@channel, chat),  method: 'delete', data: { confirm: '本当に削除しますか？' } %>

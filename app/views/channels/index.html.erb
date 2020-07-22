@@ -1,11 +1,11 @@
   <div class="channels_form">
 
     </div>
-    <div class="container">
+    <div class="channel_main">
       <ul class="nav justify-content-center"　class="channel_item">
         <li class="nav-item">
-          <h1 class="nav-link active" >
-           <div class="channel_item">
+          <h1 class="nav-link active">
+           <div class="channel_item alert alert-primary">
               <% @channels.each do |channel| %>
               　 <%= link_to channel.channel, channel_chats_path(channel.id) %>
               <% end %>

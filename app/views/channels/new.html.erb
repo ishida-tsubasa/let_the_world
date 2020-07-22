@@ -3,9 +3,11 @@
     　　<p class="errors_message"><%= message %></p>
     <% end %>
     <%= form_for @channel do |f| %>
-        <h1 class="channel_title">チャンネルを作成しよう</h1>
-        <%= f.text_field :channel, class: "new_channel", placeholder: "チャンネル名記載" %>
-        <%= f.submit '新規チャンネル作成', class: 'new_submit' %>
+        <h1 class="channel_title alert alert-primary">チャンネル作成しよう</h1>
+        <div class="form-group">
+            <%= f.text_field :channel, class: "new_channel", placeholder: "チャンネル名記載",  class: "form-control mr-sm-2" %>
+        </div>
+        <%= f.submit '新規チャンネル作成', class: "btn btn-outline-primary" %>
     <% end %>
 </div>
 
